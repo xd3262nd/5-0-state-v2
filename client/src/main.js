@@ -22,6 +22,10 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.prototype.$stateService = StateAPIService
 
 
+//Add Leaflet's CSS
+import "leaflet/dist/leaflet.css"
+
+
 Vue.config.productionTip = false
 
 new Vue({
