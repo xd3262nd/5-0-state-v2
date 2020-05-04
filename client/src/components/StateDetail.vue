@@ -44,8 +44,8 @@ export default {
             state: {
                 name: ''
             },
-            url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
-            zoom:2,
+            url:'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+            zoom: 2,
             center: [44,-103], //Inititalize at the geographic center of the US
             bounds: null
 
@@ -68,6 +68,7 @@ export default {
                 this.state = data
                 this.zoom = data.zoom
                 this.center = [data.lat, data.lon]
+                console.log(this.center)
                 // Fly to new center coordinates to center on state
                 this.$refs.stateMap.mapObject.flyTo(this.center, this.zoom)
             }).catch ( err => console.error(err))

@@ -10,7 +10,7 @@ export default {
     },
     // Function that sends a PATCH request to the server-->(states.js)
     setVisited(stateName, visited){
-        return axios.patch('/api/state/'+ stateName, { visited:visited }).then(response =>{
+        return axios.patch('/api/state/'+ stateName, { visited: visited }).then(response =>{
             return response.data
         })
     },
